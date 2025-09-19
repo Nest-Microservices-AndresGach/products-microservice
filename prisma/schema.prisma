@@ -22,8 +22,8 @@ model Product {
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-
-  @@index([available]) 
   //* En este caso el indice sirve para que los productos available (Hay productos que están en available:false ya que se hizo un soft delete) se busquen más rápido.
   // * Este indice sirve para hacer los querys más rapidos (en este caso no afecta mucho por la cantidad de datos tan baja)
+
+  @@index([available])
 }
